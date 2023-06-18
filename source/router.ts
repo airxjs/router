@@ -1,6 +1,6 @@
 import { AirxComponent, AirxElement, createElement, createRef, inject, provide } from 'airx'
 import { Action, Location, History, createBrowserHistory, createPath } from 'history'
-import { regexpToFunction, pathToRegexp, MatchFunction, MatchResult, Key as PathKey, Match } from 'path-to-regexp'
+import { regexpToFunction, pathToRegexp, MatchFunction, MatchResult, Key as PathKey } from 'path-to-regexp'
 import { isAbsolute, joinPaths } from './path'
 
 const routerProviderKey = 'router'
@@ -36,6 +36,7 @@ export function isPathRoute(route: Route): route is PathRoute {
 }
 
 export function useRouter(): History {
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   return inject<History>(routerProviderKey).value!
 }
 
@@ -84,6 +85,7 @@ export function Router(props: RouterProps) {
         }
       }
 
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const matcher = matcherMap.get(route)!
       const matchResult = matcher(path)
       if (matchResult === false) return null
@@ -159,7 +161,9 @@ export function Router(props: RouterProps) {
 
         return createElement(
           matchResult.route.component,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           { data: matchResult.result } as any,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           ...children as any
         )
       }
