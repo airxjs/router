@@ -1,9 +1,9 @@
+import { regexpToFunction, pathToRegexp, MatchFunction, MatchResult, Key as PathKey } from 'path-to-regexp'
 import { AirxComponent, AirxElement, createElement, createRef, inject, provide } from 'airx'
 import { Action, Location, History, createBrowserHistory, createPath } from 'history'
-import { regexpToFunction, pathToRegexp, MatchFunction, MatchResult, Key as PathKey } from 'path-to-regexp'
 import { isAbsolute, joinPaths } from './path'
 
-const routerProviderKey = 'router'
+const routerProviderKey = Symbol('router')
 
 interface BaseRoute {
   path: string
@@ -37,7 +37,7 @@ export function isPathRoute(route: Route): route is PathRoute {
 
 export function useRouter(): History {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-  return inject<History>(routerProviderKey).value!
+  return inject<History>(routerProviderKey)!
 }
 
 interface RouterProps {
