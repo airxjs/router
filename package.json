@@ -1,6 +1,6 @@
 {
   "name": "airx-router",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "",
   "types": "./output/index.d.ts",
   "exports": {
@@ -17,7 +17,7 @@
     "lint": "eslint source"
   },
   "dependencies": {
-    "airx": "^0.1.8",
+    "airx": "^0.2.0",
     "history": "^5.3.0",
     "path-to-regexp": "^6.2.1"
   },

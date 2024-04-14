@@ -1,5 +1,5 @@
 import { regexpToFunction, pathToRegexp, MatchFunction, MatchResult, Key as PathKey } from 'path-to-regexp'
-import { AirxComponent, AirxElement, createElement, createRef, inject, provide } from 'airx'
+import { AirxComponent, AirxElement, createElement, createSignal, inject, provide } from 'airx'
 import { Action, Location, History, createBrowserHistory, createPath } from 'history'
 import { isAbsolute, joinPaths } from './path'
 
@@ -48,7 +48,7 @@ interface RouterProps {
 export function Router(props: RouterProps) {
   const matcherMap = new Map<Route, MatchFunction>()
   const history = props.history ?? createBrowserHistory()
-  const currentElement = createRef<AirxElement<RouteComponentProps> | null>(null)
+  const currentElement = createSignal<AirxElement<RouteComponentProps> | null>(null)
 
   interface RouteMatchResult {
     route: Route
