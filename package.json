@@ -1,31 +1,33 @@
 {
   "name": "airx-router",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
-  "types": "./output/index.d.ts",
-  "exports": {
-    "default": [
-      "./output/index.js"
-    ]
-  },
+  "main": "./output/umd/index.js",
+  "module": "./output/esm/index.js",
+  "types": "./output/esm/index.d.ts",
   "files": [
     "output/*"
   ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc -w",
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
     "lint": "eslint source"
   },
-  "dependencies": {
-    "airx": "^0.2.0",
-    "history": "^5.3.0",
-    "path-to-regexp": "^6.2.1"
+  "peerDependencies": {
+    "airx": "^0.2.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.59.9",
-    "@typescript-eslint/parser": "^5.59.9",
-    "typescript": "~5.0.0",
-    "eslint": "^8.42.0"
+    "history": "^5.3.0",
+    "path-to-regexp": "^6.2.1",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@typescript-eslint/eslint-plugin": "^7.7.0",
+    "@typescript-eslint/parser": "^7.7.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.57.0",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.4.5"
   },
   "author": "",
   "license": "MIT"
