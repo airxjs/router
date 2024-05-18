@@ -125,7 +125,7 @@ export function Router(props: RouterProps) {
     return null
   }
 
-  function handleHistoryUpdate(action: Action, location: Location) {
+  function handleHistoryUpdate(_action: Action, location: Location) {
     const path = createPath(location)
     const matchResult = matchRoute(path)
     if (matchResult == null) return currentElement.set(null)
