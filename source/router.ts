@@ -42,13 +42,14 @@ export function useRouter(): History {
 }
 
 interface RouterProps {
-  routes: Route[]
+  routes: Route[] | Route
   history?: History
 }
 
 export function Router(props: RouterProps) {
   const matcherMap = new Map<Route, MatchFunction>()
   const history = props.history ?? createBrowserHistory()
+  const routes = Array.isArray(props.routes) ? props.routes : [props.routes]
   const currentElement = createState<AirxElement<RouteComponentProps> | null>(null)
 
   interface RouteMatchResult {
@@ -117,7 +118,7 @@ export function Router(props: RouterProps) {
       return routeMatchResult
     }
 
-    for (const route of props.routes) {
+    for (const route of routes) {
       const matchResult = match('', path, route)
       if (matchResult != null) return matchResult
     }
