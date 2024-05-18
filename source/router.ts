@@ -1,7 +1,8 @@
-import { regexpToFunction, pathToRegexp, MatchFunction, MatchResult, Key as PathKey } from 'path-to-regexp'
-import { AirxComponent, AirxElement, createElement, createSignal, inject, provide } from 'airx'
+import { AirxComponent, AirxElement, createElement, inject, provide } from 'airx'
 import { Action, Location, History, createBrowserHistory, createPath } from 'history'
+import { regexpToFunction, pathToRegexp, MatchFunction, MatchResult, Key as PathKey } from 'path-to-regexp'
 import { isAbsolute, joinPaths } from './path'
+import { createState } from './signal'
 
 const routerProviderKey = Symbol('router')
 
@@ -48,7 +49,7 @@ interface RouterProps {
 export function Router(props: RouterProps) {
   const matcherMap = new Map<Route, MatchFunction>()
   const history = props.history ?? createBrowserHistory()
-  const currentElement = createSignal<AirxElement<RouteComponentProps> | null>(null)
+  const currentElement = createState<AirxElement<RouteComponentProps> | null>(null)
 
   interface RouteMatchResult {
     route: Route
@@ -127,7 +128,7 @@ export function Router(props: RouterProps) {
   function handleHistoryUpdate(action: Action, location: Location) {
     const path = createPath(location)
     const matchResult = matchRoute(path)
-    if (matchResult == null) return currentElement.value = null
+    if (matchResult == null) return currentElement.set(null)
 
     function handleRedirect(matchResult: RouteMatchResult) {
       if (isRedirectRoute(matchResult.route)) {
@@ -172,11 +173,11 @@ export function Router(props: RouterProps) {
     }
 
     const isRedirected = handleRedirect(matchResult)
-    if (!isRedirected) currentElement.value = createRouteElement(matchResult)
+    if (!isRedirected) currentElement.set(createRouteElement(matchResult))
   }
 
   history.listen(data => handleHistoryUpdate(data.action, data.location))
   handleHistoryUpdate(history.action, history.location)
   provide(routerProviderKey, history)
-  return () => currentElement.value
+  return () => currentElement.get()
 }
