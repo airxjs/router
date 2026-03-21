@@ -1,0 +1,173 @@
+{
+  "schema": "projitive-json-store",
+  "tasks": [
+    {
+      "id": "TASK-0001",
+      "title": "Bootstrap governance workspace",
+      "status": "DONE",
+      "owner": "GitHub Copilot",
+      "summary": "初始化 airx-router 项目治理骨架，并补充项目定位、技术栈和治理重点说明。",
+      "updatedAt": "2026-03-21T13:50:22.754Z",
+      "links": [
+        ".projitive/README.md",
+        ".projitive/tasks.md",
+        ".projitive/roadmap.md"
+      ],
+      "roadmapRefs": [
+        "ROADMAP-0001"
+      ],
+      "recordVersion": 3
+    },
+    {
+      "id": "TASK-0003",
+      "title": "补齐路由行为测试与示例覆盖",
+      "status": "TODO",
+      "owner": "GitHub Copilot",
+      "summary": "围绕嵌套路由、重定向和历史模式建立首批行为验证。",
+      "updatedAt": "2026-03-21T13:50:05.893Z",
+      "links": [
+        "README.md",
+        "source/"
+      ],
+      "roadmapRefs": [
+        "ROADMAP-0001"
+      ],
+      "recordVersion": 1
+    },
+    {
+      "id": "TASK-0004",
+      "title": "完善 Router 集成文档",
+      "status": "TODO",
+      "owner": "GitHub Copilot",
+      "summary": "补充与 airx 主框架协作的接入文档、示例与限制说明。",
+      "updatedAt": "2026-03-21T13:50:05.893Z",
+      "links": [
+        "README.md",
+        ".projitive/README.md"
+      ],
+      "roadmapRefs": [
+        "ROADMAP-0001"
+      ],
+      "recordVersion": 1
+    },
+    {
+      "id": "TASK-0002",
+      "title": "梳理 Router 与 Airx 版本兼容矩阵",
+      "status": "DONE",
+      "owner": "GitHub Copilot",
+      "summary": "完成 Router 对 Airx 运行时模型的依赖梳理，并形成兼容矩阵文档。",
+      "updatedAt": "2026-03-21T14:00:06.495Z",
+      "links": [
+        "source/router.ts",
+        "source/path.ts",
+        ".projitive/designs/router-airx-compatibility-matrix.md",
+        "home/yinxulai/Project/yinxulai.github.io/package.json"
+      ],
+      "roadmapRefs": [
+        "ROADMAP-0001"
+      ],
+      "recordVersion": 3
+    },
+    {
+      "id": "TASK-0005",
+      "title": "建立 Router 基建升级与依赖同步策略",
+      "status": "TODO",
+      "owner": "yinxulai",
+      "summary": "仅做规划与决策。定义 router 随 airx 同步迭代的版本策略，明确 peerDependencies、Node/TS、CI 与发布节奏。",
+      "updatedAt": "2026-03-21T14:20:34.128Z",
+      "links": [
+        "home/yinxulai/Project/airxjs/router/package.json",
+        "home/yinxulai/Project/airxjs/router/.github/workflows",
+        "home/yinxulai/Project/airxjs/router/.projitive/designs/router-airx-compatibility-matrix.md"
+      ],
+      "roadmapRefs": [
+        "ROADMAP-0002"
+      ],
+      "subState": {
+        "phase": "design",
+        "confidence": 0.88
+      },
+      "recordVersion": 1
+    },
+    {
+      "id": "TASK-0006",
+      "title": "定义 Router 功能正确性验证矩阵",
+      "status": "TODO",
+      "owner": "yinxulai",
+      "summary": "仅做规划与决策。覆盖路由匹配、导航守卫、history/hash 行为、重定向与嵌套路由，明确可用性门禁与回归策略。",
+      "updatedAt": "2026-03-21T14:20:51.095Z",
+      "links": [
+        "home/yinxulai/Project/airxjs/router/source/router.ts",
+        "home/yinxulai/Project/airxjs/router/.projitive/designs/router-airx-compatibility-matrix.md"
+      ],
+      "roadmapRefs": [
+        "ROADMAP-0002"
+      ],
+      "subState": {
+        "phase": "design",
+        "confidence": 0.88
+      },
+      "recordVersion": 1
+    },
+    {
+      "id": "TASK-0007",
+      "title": "审计 Router 与 Signals 交互语义并定义回归用例",
+      "status": "TODO",
+      "owner": "yinxulai",
+      "summary": "仅做规划与决策。识别 Router 中依赖 signals 的状态传播路径，定义变化收集与响应时序相关的回归测试计划。",
+      "updatedAt": "2026-03-21T14:21:07.828Z",
+      "links": [
+        "home/yinxulai/Project/airxjs/router/source/router.ts",
+        "https://github.com/tc39/proposal-signals"
+      ],
+      "roadmapRefs": [
+        "ROADMAP-0002"
+      ],
+      "subState": {
+        "phase": "design",
+        "confidence": 0.82
+      },
+      "recordVersion": 1
+    }
+  ],
+  "roadmaps": [
+    {
+      "id": "ROADMAP-0001",
+      "title": "建立 Airx Router 兼容性与行为测试基线",
+      "status": "active",
+      "time": "2026-Q2",
+      "updatedAt": "2026-03-21T13:49:26.924Z",
+      "recordVersion": 2
+    },
+    {
+      "id": "ROADMAP-0002",
+      "title": "Router 兼容性与行为正确性路线",
+      "status": "active",
+      "time": "2026-Q2~Q3",
+      "updatedAt": "2026-03-21T14:20:13.674Z",
+      "recordVersion": 1
+    }
+  ],
+  "meta": {
+    "tasks_version": 11,
+    "roadmaps_version": 3,
+    "store_schema_version": 3
+  },
+  "view_state": {
+    "tasks_markdown": {
+      "name": "tasks_markdown",
+      "dirty": false,
+      "lastSourceVersion": 11,
+      "lastBuiltAt": "2026-03-21T14:22:29.375Z",
+      "recordVersion": 34
+    },
+    "roadmaps_markdown": {
+      "name": "roadmaps_markdown",
+      "dirty": false,
+      "lastSourceVersion": 3,
+      "lastBuiltAt": "2026-03-21T14:22:29.378Z",
+      "recordVersion": 8
+    }
+  },
+  "migration_history": []
+}
