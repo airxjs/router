@@ -21,26 +21,28 @@
     {
       "id": "TASK-0003",
       "title": "补齐路由行为测试与示例覆盖",
-      "status": "TODO",
+      "status": "DONE",
       "owner": "GitHub Copilot",
       "summary": "围绕嵌套路由、重定向和历史模式建立首批行为验证。",
-      "updatedAt": "2026-03-21T13:50:05.893Z",
+      "updatedAt": "2026-03-21T15:07:00.957Z",
       "links": [
-        "README.md",
-        "source/"
+        "source/router.test.ts",
+        "vitest.config.ts",
+        "vitest.setup.ts",
+        "package.json"
       ],
       "roadmapRefs": [
         "ROADMAP-0001"
       ],
-      "recordVersion": 1
+      "recordVersion": 3
     },
     {
       "id": "TASK-0004",
       "title": "完善 Router 集成文档",
-      "status": "TODO",
+      "status": "DONE",
       "owner": "GitHub Copilot",
       "summary": "补充与 airx 主框架协作的接入文档、示例与限制说明。",
-      "updatedAt": "2026-03-21T13:50:05.893Z",
+      "updatedAt": "2026-03-21T15:09:05.893Z",
       "links": [
         "README.md",
         ".projitive/README.md"
@@ -48,7 +50,7 @@
       "roadmapRefs": [
         "ROADMAP-0001"
       ],
-      "recordVersion": 1
+      "recordVersion": 3
     },
     {
       "id": "TASK-0002",
@@ -154,7 +156,7 @@
     }
   ],
   "meta": {
-    "tasks_version": 13,
+    "tasks_version": 17,
     "roadmaps_version": 3,
     "store_schema_version": 3
   },
@@ -162,9 +164,9 @@
     "tasks_markdown": {
       "name": "tasks_markdown",
       "dirty": false,
-      "lastSourceVersion": 13,
-      "lastBuiltAt": "2026-03-21T14:47:48.802Z",
-      "recordVersion": 42
+      "lastSourceVersion": 17,
+      "lastBuiltAt": "2026-03-21T15:09:16.584Z",
+      "recordVersion": 54
     },
     "roadmaps_markdown": {
       "name": "roadmaps_markdown",
