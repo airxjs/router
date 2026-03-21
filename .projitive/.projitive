@@ -112,13 +112,18 @@
     {
       "id": "TASK-0007",
       "title": "审计 Router 与 Signals 交互语义并定义回归用例",
-      "status": "TODO",
+      "status": "DONE",
       "owner": "yinxulai",
-      "summary": "仅做规划与决策。识别 Router 中依赖 signals 的状态传播路径，定义变化收集与响应时序相关的回归测试计划。",
-      "updatedAt": "2026-03-21T14:21:07.828Z",
+      "summary": "完成规划与决策。识别了 Router 中依赖 signals 的状态传播路径（currentElement signal），确认了全局 Signal 单例风险，定义了 8 个回归测试用例。",
+      "updatedAt": "2026-03-21T14:47:25.121Z",
       "links": [
-        "home/yinxulai/Project/airxjs/router/source/router.ts",
-        "https://github.com/tc39/proposal-signals"
+        "source/router.ts",
+        "source/signal.ts",
+        "designs/research/TASK-0007.implementation-research.md",
+        "designs/core/architecture.md",
+        "designs/core/style-guide.md",
+        ".projitive/reports/TASK-0007-execution-report.md",
+        ".projitive/designs/router-airx-compatibility-matrix.md"
       ],
       "roadmapRefs": [
         "ROADMAP-0002"
@@ -127,7 +132,7 @@
         "phase": "design",
         "confidence": 0.82
       },
-      "recordVersion": 1
+      "recordVersion": 3
     }
   ],
   "roadmaps": [
@@ -149,7 +154,7 @@
     }
   ],
   "meta": {
-    "tasks_version": 11,
+    "tasks_version": 13,
     "roadmaps_version": 3,
     "store_schema_version": 3
   },
@@ -157,16 +162,16 @@
     "tasks_markdown": {
       "name": "tasks_markdown",
       "dirty": false,
-      "lastSourceVersion": 11,
-      "lastBuiltAt": "2026-03-21T14:22:29.375Z",
-      "recordVersion": 34
+      "lastSourceVersion": 13,
+      "lastBuiltAt": "2026-03-21T14:47:25.126Z",
+      "recordVersion": 41
     },
     "roadmaps_markdown": {
       "name": "roadmaps_markdown",
       "dirty": false,
       "lastSourceVersion": 3,
-      "lastBuiltAt": "2026-03-21T14:22:29.378Z",
-      "recordVersion": 8
+      "lastBuiltAt": "2026-03-21T14:46:05.484Z",
+      "recordVersion": 9
     }
   },
   "migration_history": []
