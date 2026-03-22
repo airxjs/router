@@ -34,6 +34,10 @@
     "typescript": "~5.0.0",
     "vitest": "^4.1.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airxjs/router"
+  },
   "author": "",
   "license": "MIT"
 }
