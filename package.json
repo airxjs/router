@@ -1,6 +1,6 @@
 {
   "name": "airx-router",
-  "version": "0.3.0",
+  "version": "0.7.0",
   "description": "",
   "main": "./output/umd/index.js",
   "module": "./output/esm/index.js",
@@ -17,7 +17,7 @@
     "test:ui": "vitest --ui"
   },
   "peerDependencies": {
-    "airx": "^0.4.0 || ^0.6.0-beta"
+    "airx": "^0.7.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
