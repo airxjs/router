@@ -1,8 +1,8 @@
 import { AirxComponent, AirxElement, createElement, inject, provide } from 'airx'
 import { Action, Location, History, createBrowserHistory, createPath } from 'history'
 import { regexpToFunction, pathToRegexp, MatchFunction, MatchResult, Key as PathKey } from 'path-to-regexp'
-import { isAbsolute, joinPaths } from './path'
-import { createState } from './signal'
+import { isAbsolute, joinPaths } from './path.js'
+import { createState } from './signal.js'
 
 const routerProviderKey = Symbol('router')
 
@@ -12,20 +12,51 @@ interface BaseRoute {
   meta?: Record<string, unknown>
 }
 
+/**
+ * 路由组件接收的标准参数。
+ *
+ * @example
+ * import type { RouteComponentProps } from 'airx-router'
+ *
+ * function UserPage(props: RouteComponentProps) {
+ *   return () => props.data.params.id
+ * }
+ */
 export interface RouteComponentProps {
   data: MatchResult
   children: AirxElement<RouteComponentProps>[]
 }
 
+/**
+ * 普通路径路由定义。
+ *
+ * @example
+ * const route = {
+ *   path: '/users/:id',
+ *   component: UserPage
+ * }
+ */
 export interface PathRoute extends BaseRoute {
   children?: Route[]
   component: AirxComponent<RouteComponentProps>
 }
 
+/**
+ * 重定向路由定义。
+ *
+ * @example
+ * const route = {
+ *   path: '/old-home',
+ *   redirect: '/home'
+ * }
+ */
 export interface RedirectRoute extends BaseRoute {
   redirect: string
 }
 
+/**
+ * 路由配置联合类型。
+ */
 export type Route = PathRoute | RedirectRoute
 
 export function isRedirectRoute(route: Route): route is RedirectRoute {
@@ -36,6 +67,19 @@ export function isPathRoute(route: Route): route is PathRoute {
   return !!(!isRedirectRoute(route) && route.component)
 }
 
+/**
+ * 获取当前路由器实例。
+ *
+ * 该方法必须在 Router 组件树内部调用。
+ *
+ * @example
+ * import { useRouter } from 'airx-router'
+ *
+ * function BackButton() {
+ *   const router = useRouter()
+ *   return () => ({ onClick: () => router.back() })
+ * }
+ */
 export function useRouter(): History {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   return inject<History>(routerProviderKey)!
@@ -46,6 +90,31 @@ interface RouterProps {
   history?: History
 }
 
+/**
+ * 路由根组件。
+ *
+ * @param props.routes 路由表，支持数组或单条路由。
+ * @param props.history 可选自定义 history 实例，未传时默认使用 createBrowserHistory。
+ * @returns 返回一个响应式渲染函数。
+ *
+ * @example
+ * import { Router } from 'airx-router'
+ *
+ * function Home() {
+ *   return () => 'Home'
+ * }
+ *
+ * function User(props: RouteComponentProps) {
+ *   return () => `User: ${props.data.params.id}`
+ * }
+ *
+ * const routes: Route[] = [
+ *   { path: '/', component: Home },
+ *   { path: '/users/:id', component: User }
+ * ]
+ *
+ * const App = () => () => <Router routes={routes} />
+ */
 export function Router(props: RouterProps) {
   const matcherMap = new Map<Route, MatchFunction>()
   const history = props.history ?? createBrowserHistory()

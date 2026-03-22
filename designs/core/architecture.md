@@ -124,9 +124,8 @@ Used with Airx's `provide(routerProviderKey, history)` to make history available
 
 | Output | Path |
 |---|---|
-| UMD | `output/umd/index.js` |
-| ESM | `output/esm/index.js` |
-| Types | `output/esm/index.d.ts` |
+| ESM | `output/index.js` |
+| Types | `output/index.d.ts` |
 
 ## 8. Design Constraints
 
@@ -134,3 +133,9 @@ Used with Airx's `provide(routerProviderKey, history)` to make history available
 2. **Synchronous redirect handling**: Redirects call `history.push()` synchronously during history callback
 3. **Global Signal singleton**: `signal.ts` enforces single Signal instance via global lookup
 4. **Lazy matcher creation**: Matchers are created on first match and cached in `matcherMap`
+
+## 9. Build Strategy
+
+- Package format: pure ESM
+- Build tool: `tsc`
+- Local relative imports use explicit `.js` extension to satisfy Node ESM resolution

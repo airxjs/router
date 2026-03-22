@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { createMemoryHistory } from 'history'
-import { Route, PathRoute, RedirectRoute, isRedirectRoute, isPathRoute } from './router'
+import { Route, PathRoute, RedirectRoute, isRedirectRoute, isPathRoute } from './router.js'
 
 // TestRouteComponent - simple component for testing
 function TestRouteComponent() {
