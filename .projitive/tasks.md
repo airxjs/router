@@ -17,7 +17,7 @@ This file is generated from .projitive governance store by Projitive MCP. Manual
 4. 推送 dev 分支 → merge main → npm publish 0.3.0
 
 阻塞条件：airx 0.6.0 稳定版发布后才执行终态 peerDeps 更新，但可提前在 dev 分支上准备
-- updatedAt: 2026-03-21T18:09:33.851Z
+- updatedAt: 2026-03-22T01:59:48.126Z
 - roadmapRefs: ROADMAP-0002
 - links:
   - home/yinxulai/Project/airxjs/router/package.json

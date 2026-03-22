@@ -145,7 +145,8 @@
       "status": "DONE",
       "owner": "",
       "summary": "当前 peerDependencies 指向 airx@^0.3.0-alpha.1，需升级对齐到 airx 最新稳定版（0.6.0 发布后为 ^0.6.0，过渡期可先对齐 ^0.4.0）。router 内部已使用 createSignal / provide / inject 新模型，但 peerDeps 声明滞后。\n\n执行步骤：\n1. 确认 router 源码与 airx@^0.4.0 的行为兼容性（运行 npm test）\n2. 将 peerDependencies.airx 更新为 ^0.4.0（等 airx 0.6.0 发布后执行终态更新）\n3. 将版本号升至 0.3.0（去掉 alpha 标签）\n4. 推送 dev 分支 → merge main → npm publish 0.3.0\n\n阻塞条件：airx 0.6.0 稳定版发布后才执行终态 peerDeps 更新，但可提前在 dev 分支上准备",
-      "updatedAt": "2026-03-21T18:09:33.851Z",
+<<<<<<< HEAD
+      "updatedAt": "2026-03-22T01:59:48.126Z",
       "links": [
         "home/yinxulai/Project/airxjs/router/package.json",
         "home/yinxulai/Project/airxjs/router/source/router.ts",
@@ -185,7 +186,8 @@
       "name": "tasks_markdown",
       "dirty": false,
       "lastSourceVersion": 24,
-      "lastBuiltAt": "2026-03-21T18:09:33.859Z",
+<<<<<<< HEAD
+      "lastBuiltAt": "2026-03-22T01:59:48.131Z",
       "recordVersion": 73
     },
     "roadmaps_markdown": {
