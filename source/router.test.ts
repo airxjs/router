@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { createMemoryHistory, MemoryHistory } from 'history'
+import { describe, it, expect } from 'vitest'
+import { createMemoryHistory } from 'history'
 import { Route, PathRoute, RedirectRoute, isRedirectRoute, isPathRoute } from './router'
 
 // TestRouteComponent - simple component for testing
