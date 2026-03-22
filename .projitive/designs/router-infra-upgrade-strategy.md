@@ -10,8 +10,8 @@
 
 | 项目 | 当前版本 | peer dependency | 构建方式 |
 |------|---------|----------------|---------|
-| `airx-router` | `0.3.0-alpha.1` | `airx@^0.3.0-alpha.1` | Rollup + esbuild |
-| `airx`（依赖目标） | `0.4.0` | — | Rollup |
+| `airx-router` | `0.3.0-alpha.1` | `airx@^0.3.0-alpha.1` | TypeScript (`tsc`) |
+| `airx`（依赖目标） | `0.4.0` | — | Vite library build |
 
 **问题**：peerDependencies 声明的是 `^0.3.0-alpha.1`，而 airx 当前已发布 `0.4.0`，存在版本偏移。
 
@@ -24,7 +24,7 @@ airx-router@0.3.x+
 ├── peer: airx ^0.3.0 || ^0.4.0（需补齐 0.4.x 支持声明）
 ├── Node.js: >=16.0.0（从无声明 → 明确声明）
 ├── TypeScript: >=5.0.0（升级自 ~5.0.0，与 airx 保持同步）
-└── 构建产物: ESM + UMD（保持不变）
+└── 构建产物: ESM（统一采用标准 exports）
 ```
 
 ### 3.1 peerDependencies 更新规则
@@ -126,7 +126,7 @@ strategy:
 | 类型检查 | `tsc --noEmit` | 零 error |
 | lint | `npm run lint` | 零 error |
 | 单元测试 | `npm run test:run` | 100% pass |
-| 构建产物 | `npm run build` | 生成 esm + umd |
+| 构建产物 | `npm run build` | 生成 `output/index.js` 与 `output/index.d.ts` |
 
 ---
 

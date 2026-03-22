@@ -2,15 +2,21 @@
   "name": "airx-router",
   "version": "0.7.1",
   "description": "",
-  "main": "./output/umd/index.js",
-  "module": "./output/esm/index.js",
-  "types": "./output/esm/index.d.ts",
+  "type": "module",
+  "types": "./output/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./output/index.d.ts",
+      "import": "./output/index.js",
+      "default": "./output/index.js"
+    }
+  },
   "files": [
     "output/*"
   ],
   "scripts": {
-    "dev": "rollup -c -w",
-    "build": "rollup -c",
+    "dev": "node -e \"require('node:fs').rmSync('output', { recursive: true, force: true })\" && tsc -w",
+    "build": "node -e \"require('node:fs').rmSync('output', { recursive: true, force: true })\" && tsc",
     "lint": "eslint source",
     "test": "vitest",
     "test:run": "vitest run",
@@ -20,16 +26,12 @@
     "airx": "^0.7.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.7",
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "@typescript-eslint/eslint-plugin": "^5.59.9",
     "@typescript-eslint/parser": "^5.59.9",
     "@vitest/ui": "^4.1.0",
     "eslint": "^8.42.0",
     "history": "^5.3.0",
     "path-to-regexp": "^6.2.1",
-    "rollup-plugin-esbuild": "^6.1.1",
-    "rollup-plugin-typescript2": "^0.36.0",
     "signal-polyfill": "^0.1.1",
     "typescript": "~5.0.0",
     "vitest": "^4.1.0"

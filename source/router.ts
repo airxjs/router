@@ -1,8 +1,8 @@
 import { AirxComponent, AirxElement, createElement, inject, provide } from 'airx'
 import { Action, Location, History, createBrowserHistory, createPath } from 'history'
 import { regexpToFunction, pathToRegexp, MatchFunction, MatchResult, Key as PathKey } from 'path-to-regexp'
-import { isAbsolute, joinPaths } from './path'
-import { createState } from './signal'
+import { isAbsolute, joinPaths } from './path.js'
+import { createState } from './signal.js'
 
 const routerProviderKey = Symbol('router')
 

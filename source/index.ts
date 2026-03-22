@@ -20,4 +20,4 @@ export { createBrowserHistory, createHashHistory, createMemoryHistory } from 'hi
  *
  * const App = () => () => <Router routes={routes} />
  */
-export { Router, useRouter, Route, RouteComponentProps, RedirectRoute, PathRoute } from './router'
+export { Router, useRouter, Route, RouteComponentProps, RedirectRoute, PathRoute } from './router.js'
