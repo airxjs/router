@@ -7,3 +7,10 @@ const globalScope = global as typeof globalThis & { Signal?: typeof Signal }
 if (!globalScope.Signal) {
   globalScope.Signal = Signal
 }
+
+// airx browser runtime declares a class extending Element at module-evaluation time.
+// Provide a minimal Element shim for Node test environment.
+const domGlobal = global as typeof globalThis & { Element?: typeof Element }
+if (!domGlobal.Element) {
+  domGlobal.Element = class ElementShim {} as unknown as typeof Element
+}
