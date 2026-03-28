@@ -3,199 +3,79 @@
   "tasks": [
     {
       "id": "TASK-0001",
-      "title": "Bootstrap governance workspace",
-      "status": "DONE",
-      "owner": "GitHub Copilot",
-      "summary": "初始化 airx-router 项目治理骨架，并补充项目定位、技术栈和治理重点说明。",
-      "updatedAt": "2026-03-21T13:50:22.754Z",
+      "title": "Initialize project architecture document",
+      "status": "TODO",
+      "owner": "unassigned",
+      "summary": "Establish system context, boundaries, modules, and integration flows in designs/core/architecture.md.",
+      "updatedAt": "2026-03-28T02:03:56.918Z",
       "links": [
-        ".projitive/README.md",
-        ".projitive/tasks.md",
-        ".projitive/roadmap.md"
+        "designs/core/architecture.md"
       ],
       "roadmapRefs": [
         "ROADMAP-0001"
       ],
-      "recordVersion": 3
-    },
-    {
-      "id": "TASK-0003",
-      "title": "补齐路由行为测试与示例覆盖",
-      "status": "DONE",
-      "owner": "GitHub Copilot",
-      "summary": "围绕嵌套路由、重定向和历史模式建立首批行为验证。",
-      "updatedAt": "2026-03-21T15:07:00.957Z",
-      "links": [
-        "source/router.test.ts",
-        "vitest.config.ts",
-        "vitest.setup.ts",
-        "package.json"
-      ],
-      "roadmapRefs": [
-        "ROADMAP-0001"
-      ],
-      "recordVersion": 3
-    },
-    {
-      "id": "TASK-0004",
-      "title": "完善 Router 集成文档",
-      "status": "DONE",
-      "owner": "GitHub Copilot",
-      "summary": "补充与 airx 主框架协作的接入文档、示例与限制说明。",
-      "updatedAt": "2026-03-21T15:09:05.893Z",
-      "links": [
-        "README.md",
-        ".projitive/README.md"
-      ],
-      "roadmapRefs": [
-        "ROADMAP-0001"
-      ],
-      "recordVersion": 3
+      "recordVersion": 1
     },
     {
       "id": "TASK-0002",
-      "title": "梳理 Router 与 Airx 版本兼容矩阵",
-      "status": "DONE",
-      "owner": "GitHub Copilot",
-      "summary": "完成 Router 对 Airx 运行时模型的依赖梳理，并形成兼容矩阵文档。",
-      "updatedAt": "2026-03-21T14:00:06.495Z",
+      "title": "Initialize code style document",
+      "status": "TODO",
+      "owner": "unassigned",
+      "summary": "Capture naming, structure, testing, and review conventions in designs/core/code-style.md.",
+      "updatedAt": "2026-03-28T02:03:56.919Z",
       "links": [
-        "source/router.ts",
-        "source/path.ts",
-        ".projitive/designs/router-airx-compatibility-matrix.md",
-        "home/yinxulai/Project/yinxulai.github.io/package.json"
+        "designs/core/code-style.md"
       ],
       "roadmapRefs": [
         "ROADMAP-0001"
       ],
-      "recordVersion": 3
+      "recordVersion": 1
     },
     {
-      "id": "TASK-0005",
-      "title": "建立 Router 基建升级与依赖同步策略",
-      "status": "DONE",
-      "owner": "yinxulai",
-      "summary": "已完成 Router 基建升级与依赖同步策略，明确 peerDependencies 目标范围（^0.3.0||^0.4.0）、Node/TS 支持范围、Breaking Change 政策、分阶段升级路径和 CI 矩阵测试方案。",
-      "updatedAt": "2026-03-21T16:10:26.929Z",
+      "id": "TASK-0003",
+      "title": "Initialize UI style document",
+      "status": "TODO",
+      "owner": "unassigned",
+      "summary": "Capture visual language, tokens, accessibility, and interaction rules in designs/core/ui-style.md.",
+      "updatedAt": "2026-03-28T02:03:56.920Z",
       "links": [
-        "home/yinxulai/Project/airxjs/router/package.json",
-        "home/yinxulai/Project/airxjs/router/.github/workflows",
-        "home/yinxulai/Project/airxjs/router/.projitive/designs/router-infra-upgrade-strategy.md",
-        "home/yinxulai/Project/airxjs/router/.projitive/designs/router-airx-compatibility-matrix.md"
+        "designs/core/ui-style.md"
       ],
       "roadmapRefs": [
-        "ROADMAP-0002"
+        "ROADMAP-0001"
       ],
-      "subState": {
-        "phase": "implementation",
-        "confidence": 1
-      },
-      "recordVersion": 3
-    },
-    {
-      "id": "TASK-0006",
-      "title": "定义 Router 功能正确性验证矩阵",
-      "status": "DONE",
-      "owner": "yinxulai",
-      "summary": "已完成 Router 功能正确性验证矩阵，覆盖路由匹配、嵌套、重定向、信号驱动、注入机制 5 个功能域，定义 24 个测试用例、P0/P1/P2 门禁划分和回归触发策略。",
-      "updatedAt": "2026-03-21T16:10:26.929Z",
-      "links": [
-        "home/yinxulai/Project/airxjs/router/source/router.ts",
-        "home/yinxulai/Project/airxjs/router/source/router.test.ts",
-        "home/yinxulai/Project/airxjs/router/.projitive/designs/router-correctness-matrix.md",
-        "home/yinxulai/Project/airxjs/router/.projitive/reports/TASK-0007-execution-report.md"
-      ],
-      "roadmapRefs": [
-        "ROADMAP-0002"
-      ],
-      "subState": {
-        "phase": "implementation",
-        "confidence": 1
-      },
-      "recordVersion": 3
-    },
-    {
-      "id": "TASK-0007",
-      "title": "审计 Router 与 Signals 交互语义并定义回归用例",
-      "status": "DONE",
-      "owner": "yinxulai",
-      "summary": "完成规划与决策。识别了 Router 中依赖 signals 的状态传播路径（currentElement signal），确认了全局 Signal 单例风险，定义了 8 个回归测试用例。",
-      "updatedAt": "2026-03-21T14:47:25.121Z",
-      "links": [
-        "source/router.ts",
-        "source/signal.ts",
-        "designs/research/TASK-0007.implementation-research.md",
-        "designs/core/architecture.md",
-        "designs/core/style-guide.md",
-        ".projitive/reports/TASK-0007-execution-report.md",
-        ".projitive/designs/router-airx-compatibility-matrix.md"
-      ],
-      "roadmapRefs": [
-        "ROADMAP-0002"
-      ],
-      "subState": {
-        "phase": "design",
-        "confidence": 0.82
-      },
-      "recordVersion": 3
-    },
-    {
-      "id": "TASK-0008",
-      "title": "对齐 peerDeps 到最新 airx 并发布 0.3.0 稳定版",
-      "status": "DONE",
-      "owner": "",
-      "summary": "当前 peerDependencies 指向 airx@^0.3.0-alpha.1，需升级对齐到 airx 最新稳定版（0.6.0 发布后为 ^0.6.0，过渡期可先对齐 ^0.4.0）。router 内部已使用 createSignal / provide / inject 新模型，但 peerDeps 声明滞后。\n\n执行步骤：\n1. 确认 router 源码与 airx@^0.4.0 的行为兼容性（运行 npm test）\n2. 将 peerDependencies.airx 更新为 ^0.4.0（等 airx 0.6.0 发布后执行终态更新）\n3. 将版本号升至 0.3.0（去掉 alpha 标签）\n4. 推送 dev 分支 → merge main → npm publish 0.3.0\n\n阻塞条件：airx 0.6.0 稳定版发布后才执行终态 peerDeps 更新，但可提前在 dev 分支上准备",
-<<<<<<< HEAD
-      "updatedAt": "2026-03-22T01:59:48.126Z",
-      "links": [
-        "home/yinxulai/Project/airxjs/router/package.json",
-        "home/yinxulai/Project/airxjs/router/source/router.ts",
-        "home/yinxulai/Project/airxjs/router/.projitive/designs/router-airx-compatibility-matrix.md"
-      ],
-      "roadmapRefs": [
-        "ROADMAP-0002"
-      ],
-      "recordVersion": 3
+      "recordVersion": 1
     }
   ],
   "roadmaps": [
     {
       "id": "ROADMAP-0001",
-      "title": "建立 Airx Router 兼容性与行为测试基线",
+      "title": "Bootstrap governance and core docs baseline",
       "status": "active",
-      "time": "2026-Q2",
-      "updatedAt": "2026-03-21T13:49:26.924Z",
-      "recordVersion": 2
-    },
-    {
-      "id": "ROADMAP-0002",
-      "title": "Router 兼容性与行为正确性路线",
-      "status": "active",
-      "time": "2026-Q2~Q3",
-      "updatedAt": "2026-03-21T14:20:13.674Z",
+      "time": "2026-Q1",
+      "updatedAt": "2026-03-28T02:03:56.917Z",
       "recordVersion": 1
     }
   ],
   "meta": {
-    "tasks_version": 24,
-    "roadmaps_version": 3,
+    "tasks_version": 3,
+    "roadmaps_version": 1,
     "store_schema_version": 3
   },
   "view_state": {
     "tasks_markdown": {
       "name": "tasks_markdown",
       "dirty": false,
-      "lastSourceVersion": 24,
-<<<<<<< HEAD
-      "lastBuiltAt": "2026-03-22T01:59:48.131Z",
-      "recordVersion": 73
+      "lastSourceVersion": 3,
+      "lastBuiltAt": "2026-03-28T02:04:05.988Z",
+      "recordVersion": 6
     },
     "roadmaps_markdown": {
       "name": "roadmaps_markdown",
       "dirty": false,
-      "lastSourceVersion": 3,
-      "lastBuiltAt": "2026-03-21T14:47:48.811Z",
-      "recordVersion": 10
+      "lastSourceVersion": 1,
+      "lastBuiltAt": "2026-03-28T02:04:05.991Z",
+      "recordVersion": 4
     }
   },
   "migration_history": []
