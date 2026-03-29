@@ -34,17 +34,17 @@
     {
       "id": "TASK-0003",
       "title": "Initialize UI style document",
-      "status": "TODO",
+      "status": "DONE",
       "owner": "unassigned",
       "summary": "Capture visual language, tokens, accessibility, and interaction rules in designs/core/ui-style.md.",
-      "updatedAt": "2026-03-29T09:54:03.624Z",
+      "updatedAt": "2026-03-29T12:35:24.472Z",
       "links": [
         "designs/core/ui-style.md"
       ],
       "roadmapRefs": [
         "ROADMAP-0001"
       ],
-      "recordVersion": 1
+      "recordVersion": 3
     }
   ],
   "roadmaps": [
@@ -58,7 +58,7 @@
     }
   ],
   "meta": {
-    "tasks_version": 8,
+    "tasks_version": 10,
     "roadmaps_version": 2,
     "store_schema_version": 3
   },
@@ -66,9 +66,9 @@
     "tasks_markdown": {
       "name": "tasks_markdown",
       "dirty": false,
-      "lastSourceVersion": 8,
-      "lastBuiltAt": "2026-03-29T11:20:03.698Z",
-      "recordVersion": 20
+      "lastSourceVersion": 10,
+      "lastBuiltAt": "2026-03-29T12:35:24.477Z",
+      "recordVersion": 26
     },
     "roadmaps_markdown": {
       "name": "roadmaps_markdown",
