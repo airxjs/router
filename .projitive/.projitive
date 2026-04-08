@@ -49,15 +49,15 @@
     {
       "id": "TASK-0004",
       "title": "Bootstrap governance workspace",
-      "status": "TODO",
+      "status": "DONE",
       "owner": "",
       "summary": "为 airxjs/router 项目建立 .projitive 治理目录结构，参考同系列 airx 项目的治理配置。包括：初始化 .projitive 目录、创建 tasks.md 任务视图、创建 roadmap.md 路线图、创建 designs/core/ 核心文档（architecture.md, code-style.md, ui-style.md）、创建 reports/ 目录。参考：/home/yinxulai/Project/airxjs/airx/.projitive",
-      "updatedAt": "2026-04-08T11:12:48.368Z",
+      "updatedAt": "2026-04-08T11:44:42.222Z",
       "links": [],
       "roadmapRefs": [
         "ROADMAP-0001"
       ],
-      "recordVersion": 1
+      "recordVersion": 3
     }
   ],
   "roadmaps": [
@@ -71,7 +71,7 @@
     }
   ],
   "meta": {
-    "tasks_version": 11,
+    "tasks_version": 13,
     "roadmaps_version": 2,
     "store_schema_version": 3
   },
@@ -79,9 +79,9 @@
     "tasks_markdown": {
       "name": "tasks_markdown",
       "dirty": false,
-      "lastSourceVersion": 11,
-      "lastBuiltAt": "2026-04-08T11:12:48.372Z",
-      "recordVersion": 29
+      "lastSourceVersion": 13,
+      "lastBuiltAt": "2026-04-08T11:44:42.227Z",
+      "recordVersion": 35
     },
     "roadmaps_markdown": {
       "name": "roadmaps_markdown",
