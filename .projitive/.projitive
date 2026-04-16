@@ -64,15 +64,15 @@
     {
       "id": "ROADMAP-0001",
       "title": "Bootstrap governance and core docs baseline",
-      "status": "active",
+      "status": "done",
       "time": "2026-Q1",
-      "updatedAt": "2026-03-29T09:54:03.624Z",
-      "recordVersion": 1
+      "updatedAt": "2026-04-16T22:46:04.281Z",
+      "recordVersion": 2
     }
   ],
   "meta": {
     "tasks_version": 13,
-    "roadmaps_version": 2,
+    "roadmaps_version": 3,
     "store_schema_version": 3
   },
   "view_state": {
@@ -86,9 +86,9 @@
     "roadmaps_markdown": {
       "name": "roadmaps_markdown",
       "dirty": false,
-      "lastSourceVersion": 2,
-      "lastBuiltAt": "2026-03-30T15:38:06.617Z",
-      "recordVersion": 6
+      "lastSourceVersion": 3,
+      "lastBuiltAt": "2026-04-16T22:46:04.288Z",
+      "recordVersion": 8
     }
   },
   "migration_history": []
