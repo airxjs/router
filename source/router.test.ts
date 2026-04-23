@@ -100,8 +100,8 @@ describe('airx-router routing configuration', () => {
       const rootRoute = routes[0] as PathRoute
       // root has 2 children: redirect to child-1, and the child-1 route itself
       expect(rootRoute.children).toHaveLength(2)
-      expect(rootRoute.children![0].path).toBe('/')
-      expect((rootRoute.children![1] as PathRoute).path).toBe('child-1')
+      expect(rootRoute.children?.[0].path).toBe('/')
+      expect((rootRoute.children?.[1] as PathRoute).path).toBe('child-1')
     })
 
     it('should support deep nested routes', () => {
@@ -124,8 +124,8 @@ describe('airx-router routing configuration', () => {
         }
       ]
       const aRoute = routes[0] as PathRoute
-      const bRoute = aRoute.children![0] as PathRoute
-      const cRoute = bRoute.children![0] as PathRoute
+      const bRoute = aRoute.children?.[0] as PathRoute
+      const cRoute = bRoute.children?.[0] as PathRoute
       expect(cRoute.path).toBe('c')
     })
 
@@ -180,7 +180,7 @@ describe('airx-router routing configuration', () => {
         }
       ]
       const parentRoute = routes[0] as PathRoute
-      const redirectRoute = parentRoute.children![0]
+      const redirectRoute = parentRoute.children?.[0]
       expect(isRedirectRoute(redirectRoute)).toBe(true)
     })
 
@@ -198,7 +198,7 @@ describe('airx-router routing configuration', () => {
         }
       ]
       const parentRoute = routes[0] as PathRoute
-      expect(isRedirectRoute(parentRoute.children![0])).toBe(true)
+      expect(isRedirectRoute(parentRoute.children?.[0])).toBe(true)
     })
 
     it('should support chained redirects', () => {
