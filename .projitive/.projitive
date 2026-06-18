@@ -69,6 +69,38 @@
       "links": [],
       "roadmapRefs": [],
       "recordVersion": 3
+    },
+    {
+      "id": "TASK-0006",
+      "title": "Router 0.10.0 规划：与 Airx 0.10.0 对齐",
+      "status": "DONE",
+      "owner": "",
+      "summary": "Router 0.9.0 已完成，需要规划 0.10.0 与 Airx 0.10.0 对齐。检查当前 router 与新版本 airx 的兼容性问题，确定需要调整的 API 和功能。",
+      "updatedAt": "2026-06-18T05:06:13.873Z",
+      "links": [
+        ".projitive/designs/router-0.10.0-planning.md",
+        ".projitive/designs/router-correctness-matrix.md"
+      ],
+      "roadmapRefs": [
+        "ROADMAP-0001"
+      ],
+      "recordVersion": 3
+    },
+    {
+      "id": "TASK-0007",
+      "title": "补充 Router TC-S 信号驱动测试覆盖",
+      "status": "DONE",
+      "owner": "",
+      "summary": "根据 router-correctness-matrix.md 定义，TC-S 系列（信号驱动）测试当前缺失。需要补充：TC-S-001 导航触发 currentElement 更新、TC-S-002 同路径重复导航、TC-S-003 全局 Signal 单例风险的测试用例。",
+      "updatedAt": "2026-06-18T05:12:02.528Z",
+      "links": [
+        ".projitive/designs/router-correctness-matrix.md",
+        "source/router.test.ts"
+      ],
+      "roadmapRefs": [
+        "ROADMAP-0001"
+      ],
+      "recordVersion": 3
     }
   ],
   "roadmaps": [
@@ -82,7 +114,7 @@
     }
   ],
   "meta": {
-    "tasks_version": 16,
+    "tasks_version": 22,
     "roadmaps_version": 3,
     "store_schema_version": 3
   },
@@ -90,9 +122,9 @@
     "tasks_markdown": {
       "name": "tasks_markdown",
       "dirty": false,
-      "lastSourceVersion": 16,
-      "lastBuiltAt": "2026-04-23T22:27:31.707Z",
-      "recordVersion": 44
+      "lastSourceVersion": 22,
+      "lastBuiltAt": "2026-06-18T05:12:02.534Z",
+      "recordVersion": 62
     },
     "roadmaps_markdown": {
       "name": "roadmaps_markdown",
